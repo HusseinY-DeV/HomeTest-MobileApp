@@ -28,7 +28,7 @@ const AuthStack = () => {
                   headerTitleAlign : 'center',
                   title: 'HomeTest Login',
                   headerStyle: {
-                    backgroundColor: '#43f92f',
+                    backgroundColor: 'green',
                   },
                   headerTintColor: '#fff',
                   headerTitleStyle: {
@@ -43,7 +43,7 @@ const AuthStack = () => {
                   headerTitleAlign : 'center',
                   title: 'HomeTest Sign Up',
                   headerStyle: {
-                    backgroundColor: '#43f92f',
+                    backgroundColor: 'green',
                   },
                   headerTintColor: '#fff',
                   headerTitleStyle: {
@@ -69,27 +69,27 @@ const Tabs = () => {
         if (route.name === 'Posts') {
           return(
             <>
-            {focused ? <MaterialCommunityIcons name="post" size={24} color="#43f92f" /> :  <MaterialCommunityIcons name="post" size={20} color="black" /> }
+            {focused ? <MaterialCommunityIcons name="post" size={24} color="green" /> :  <MaterialCommunityIcons name="post" size={20} color="black" /> }
             </>
           )
 
         } else if (route.name === 'Profile') {
           return(
             <>
-            {focused ? <Feather name="user" size={24} color='#43f92f'/> :  <Feather name="user" size={20} color='black'/>  }
+            {focused ? <Feather name="user" size={24} color='green'/> :  <Feather name="user" size={20} color='black'/>  }
             </>
           )
         } else if (route.name === 'Tests') {
           return(
             <>
-            {focused ? <Fontisto name="blood-test" size={22} color='#43f92f'/> :  <Fontisto name="blood-test" size={18} color='black'/>  }
+            {focused ? <Fontisto name="blood-test" size={22} color='green'/> :  <Fontisto name="blood-test" size={18} color='black'/>  }
             </>
           )
         }
       },
     })}
     tabBarOptions={{
-      activeTintColor: '#43f92f',
+      activeTintColor: 'green',
       inactiveTintColor: '#3a3a3a',
     }}
     >

@@ -1,11 +1,10 @@
-//  http://192.168.1.68:8000/api;
+const back = "http://192.168.1.71:8000/api";
 
 
 
 export const getTests = async (token) => {
 
-
-    const response = await fetch("http://192.168.1.68:8000/api/tests/patient", {
+    const response = await fetch(`${back}/tests/patient`, {
         method : "GET",
         headers : {
             Authorization : `Bearer ${token}`
@@ -19,7 +18,7 @@ export const getTests = async (token) => {
 
 export const bookTest = async (token,id,tid) => {
 
-    const response = await fetch(`http://192.168.1.68:8000/api/patient/bookings/${id}/${tid}`,{
+    const response = await fetch(`${back}/patient/bookings/${id}/${tid}`,{
         method : "POST",
         headers : {
             "Accept" : "application/json",
@@ -34,7 +33,7 @@ export const bookTest = async (token,id,tid) => {
 
 export const addLocation = async (token,id,street,building,city) => {
 
-    const response = await fetch(`http://192.168.1.68:8000/api/location/patient/${id}`,{
+    const response = await fetch(`${back}/location/patient/${id}`,{
         method : "POST",
         headers : {
             "Accept" : "application/json",
@@ -56,7 +55,7 @@ export const addLocation = async (token,id,street,building,city) => {
 
 export const getBookings = async (token,id) => {
 
-    const response = await fetch(`http://192.168.1.68:8000/api/my/${id}`,{
+    const response = await fetch(`${back}/my/${id}`,{
         method : "GET",
         headers : {
             "Authorization" : `Bearer ${token}`
@@ -66,3 +65,31 @@ export const getBookings = async (token,id) => {
     const data = await response.json();
     return data;
 };
+
+
+export const deleteBook = async (token,id,tid) => {
+
+    const response = await fetch(`${back}/book/${id}/${tid}`,{
+        method : "DELETE",
+        headers : {
+            Authorization : `Bearer ${token}`
+        }
+    });
+
+    const data = await response.json();
+    return data;
+}
+
+export const buy = async (token,id) => {
+
+    const response = await fetch(`${back}/deliver/${id}`,{
+        method : "PUT",
+        headers : {
+            Authorization : `Bearer ${token}`
+        }
+    });
+
+    const data = await response.json();
+
+    return data;
+}

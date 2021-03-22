@@ -10,7 +10,6 @@ const ProfileContainer = styled.View`
     flex: 1;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
     padding: 5px;
 `;
 
@@ -100,7 +99,6 @@ const Profile = ({navigation}) => {
         (async () => {
             setLoading(true);
             const response = await getPatient(context.ID,context.authorization);
-            console.log(response);
             context.setLocation(response.response[0].location_id);
             setUser([...response.response]);
             setLoading(false);

@@ -26,7 +26,7 @@ const SignUpInput = styled.TextInput`
 
 const SignUpButton = styled.TouchableOpacity`
     margin-top: 15px;
-    background-color : #43f92f;
+    background-color : green;
     width: 30%;
     padding:10px;
     border-radius: 5px;

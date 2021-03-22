@@ -48,7 +48,7 @@ const EachPost = ({route}) => {
 
 
     const context = useContext(UserContext);
-    const src = "http://192.168.1.68:8000/storage";
+    const src = "http://192.168.1.71:8000/storage";
 
     const [loading,setLoading] = useState(true);
     const [post,setPost] = useState({});

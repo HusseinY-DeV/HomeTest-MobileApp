@@ -47,7 +47,7 @@ const Loader = styled.Text`
 const Posts = ({navigation,route}) => {
 
     const context = useContext(UserContext);
-    const src = "http://192.168.1.68:8000/storage"
+    const src = "http://192.168.1.71:8000/storage"
     const [posts,setPosts] = useState([]);
     const [loading,setLoading] = useState(true);
 
@@ -75,7 +75,7 @@ const Posts = ({navigation,route}) => {
                     keyExtractor={item => item.id.toString()}
                     data={posts}
                     renderItem={({ item }) =>
-                        (
+                        ( 
                         <Post>
                             <Title
                             onPress={() => {

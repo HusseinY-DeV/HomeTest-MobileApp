@@ -1,7 +1,10 @@
+const back = "http://192.168.1.71:8000/api";
+
+
 
 export const getBlogs = async (token) => {
     
-    const response = await fetch("http://192.168.1.13:8000/api/posts",{
+    const response = await fetch(`${back}/posts`,{
         method : "GET",
         headers : {
             Authorization : `Bearer ${token}`,
@@ -17,7 +20,7 @@ export const getBlogs = async (token) => {
 
 export const getBlog = async (token,id) => {
     
-    const response = await fetch(`http://192.168.1.13:8000/api/posts/${id}`,{
+    const response = await fetch(`${back}/posts/${id}`,{
         method : "GET",
         headers : {
             Authorization : `Bearer ${token}`,
@@ -29,4 +32,3 @@ export const getBlog = async (token,id) => {
     const data = await response.json();
     return data;
 }
-// http://192.168.1.68:8000/api

@@ -38,7 +38,7 @@ margin-top: 30px;
 
 const LoginButton = styled.TouchableOpacity`
     margin-top: 20px;
-    background-color : #43f92f;
+    background-color : green;
     width: 30%;
     padding: 10px;
     border-radius: 5px;

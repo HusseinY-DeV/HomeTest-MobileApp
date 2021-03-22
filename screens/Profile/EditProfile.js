@@ -20,7 +20,7 @@ const EditProfileContainer = styled.View`
 const SuccessText = styled.Text`
     color: whitesmoke;
     margin-top: 10px;
-    background-color: #43f92f;
+    background-color: green;
     opacity : ${({show}) => show ? "1" : "0"};
     font-weight: bold;
     font-size: 16px;

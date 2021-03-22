@@ -1,8 +1,8 @@
-//  http://192.168.1.68:8000/api;
+const back = "http://192.168.1.71:8000/api";
 
 export const getPatient = async (id,token) => {
 
-        const response = await fetch(`http://192.168.1.68:8000/api/patient/${id}`,{
+        const response = await fetch(`${back}/patient/${id}`,{
             method : "GET",
             headers : {
                 Authorization : `Bearer ${token}`
@@ -16,7 +16,7 @@ export const getPatient = async (id,token) => {
 
 export const updateNumber = async (id,number,token) => {
     
-    const response = await fetch(`http://192.168.1.68:8000/api/patient/phone/${id}`,{
+    const response = await fetch(`${back}/patient/phone/${id}`,{
         method : "PUT",
         headers : {
             "Accept" : "application/json",
@@ -35,7 +35,7 @@ export const updateNumber = async (id,number,token) => {
 
 export const updatePassword = async (id,password,token) => {
     
-    const response = await fetch(`http://192.168.1.68:8000/api/patient/password/${id}`,{
+    const response = await fetch(`${back}/patient/password/${id}`,{
         method : "PUT",
         headers : {
             "Accept" : "application/json",

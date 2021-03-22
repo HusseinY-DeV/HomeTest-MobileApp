@@ -1,11 +1,11 @@
-//  "http://192.168.1.68:8000/api";
+const back = "http://192.168.1.71:8000/api";
 
 
 
 
 export const patientSignin = async (first_name,last_name,username,phone_number,password) => {
 
-    const response = await fetch("http://192.168.1.68:8000/api/patient/register",
+    const response = await fetch(`${back}/patient/register`,
     {
         method : "POST",
         headers : {
